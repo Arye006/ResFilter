@@ -71,19 +71,4 @@ app/
 └── schemas.py            # request/response data shapes (pydantic models)
 ```
 
-## For your demo / pitch
-Mention that this approach is based on published research (Resume2Vec,
-Bevara et al. 2025, published in MDPI Electronics) showing transformer
-embeddings beat traditional keyword-based ATS systems on ranking quality
-(nDCG, RBO) in most job categories tested. Judges like a "why this approach"
-answer backed by something real.
 
-## Common issues
-- **"Connection error" downloading the model**: you need internet the
-  FIRST time you run it only. Check your wifi/firewall isn't blocking
-  huggingface.co.
-- **CORS errors from frontend**: already handled — `main.py` allows all
-  origins for the hackathon. Don't ship this setting to a real product.
-- **Slow first request**: the model loads into memory on first use, so
-  the very first API call after starting the server takes a few seconds
-  longer. Every call after that is fast.
